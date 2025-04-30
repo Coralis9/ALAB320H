@@ -1,20 +1,35 @@
-import './App.css'
-import EmployeePage from './components/EmployeePage'
-import HomePage from './components/HomePage'
+import HomePage from "./components/HomePage";
+import EmployeePage from "./components/EmployeePage";
+import { employees } from './data/employees.js';
+import './App.css';
 
-function App() {
-  
-
+export default function App() {
   return (
-    <>
-     <HomePage />
-     <EmployeePage />
-    </>
-
-  )
+    <main id='app'>
+      <HomePage employees={employees} />
+      <EmployeePage selectedEmployee={employees[1]} />
+    </main>
+  );
 }
 
-export default App
+
+// import './App.css'
+// import EmployeePage from './components/EmployeePage'
+// import HomePage from './components/HomePage'
+
+// function App() {
+  
+
+//   return (
+//     <>
+//      <HomePage />
+//      <EmployeePage />
+//     </>
+
+//   )
+// }
+
+// export default App
 
 
 // import { useState } from 'react'
